@@ -9,8 +9,7 @@ I am a masters student learning Hyperledger Fabric. The purpose of this project 
 5. Getting peers to join the channel.
 
 # Solutions
-I solved most of these issues by learning docker from a book called Master Docker. This is a must read will really clear up some miss conceptions. Docker Containers Currently, I feel like an idiot for struggling with these simple concepts. Understanding docker lets you actually get on with learning Hyperledger Fabric itself. 
-
+I solved most of these issues by learning docker from a book called Master Docker. I solved most of these issues by learning docker from a book called Master Docker.  Understanding docker lets you actually get on with learning Hyperledger Fabric itself. 
 
 # Steps
 Step1: Create Docker Swarm
