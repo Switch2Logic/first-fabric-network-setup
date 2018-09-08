@@ -7,7 +7,7 @@
 # Exit on first error, print all commands.
 set -e
 
-docker-compose -f docker-compose.yml up -d
+docker-compose -f docker-compose-host1.yaml up -d
 
 # Wait for Hyperledger Fabric to start
 # Incase of errors when running later commands, issue export FABRIC_START_TIMEOUT=<larger number>
