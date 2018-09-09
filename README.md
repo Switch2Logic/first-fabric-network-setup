@@ -26,7 +26,7 @@ command: docker network create -d overlay --attachable network-name-go's-here
 note: The name of the network I used is "rebnet" if you use a different name please make sure to propagate this change through the docker-compose.yaml files you use. I recommend doing a find and replace on the term "rebnet". 
 
 Step5: Connect second computer to overlay network
-docker run -itd --name dummyContainer --net "network-name-go's-here" alpine /bin/sh
+command: docker run -itd --name dummyContainer --net "network-name-go's-here" alpine /bin/sh
 note: This is a work around to get the second computer to connect to the ovelay network.
 
 Step6: Copy the project folder to each computer. 
