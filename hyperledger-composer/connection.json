@@ -1,0 +1,90 @@
+{
+    "name": "fabric-network",
+    "x-type": "hlfv1",
+    "version": "1.0.0",
+    "peers": {
+        "peer0.hospital1.switch2logic.co.za": {
+            "url": "grpc://192.168.0.101:7051",
+            "eventUrl": "grpc://192.168.0.101:7053"
+        },
+        "peer1.hospital1.switch2logic.co.za": {
+            "url": "grpc://192.168.0.101:8051",
+            "eventUrl": "grpc://192.168.0.101:8053"
+        },
+        "peer2.hospital1.switch2logic.co.za": {
+            "url": "grpc://192.168.0.100:9051",
+            "eventUrl": "grpc://192.168.0.100:9053"
+        },
+        "peer3.hospital1.switch2logic.co.za": {
+            "url": "grpc://192.168.0.100:10051",
+            "eventUrl": "grpc://192.168.0.100:10053"
+        }
+    },
+    "certificateAuthorities": {
+        "ca.switch2logic.co.za": {
+            "url": "http://192.168.0.101:7054",
+            "caName": "ca.switch2logic.co.za"
+        }
+    },
+    "orderers": {
+        "orderer.switch2logic.co.za": {
+            "url": "grpc://192.168.0.101:7050"
+        }
+    },
+    "organizations": {
+        "Hospital1": {
+            "mspid": "Hospital1MSP",
+            "peers": [
+                "peer0.hospital1.switch2logic.co.za",
+                "peer1.hospital1.switch2logic.co.za",
+                "peer2.hospital1.switch2logic.co.za",
+                "peer3.hospital1.switch2logic.co.za"
+            ],
+            "certificateAuthorities": [
+                "ca.switch2logic.co.za"
+            ]
+        }
+    },
+    "channels": {
+        "rebelchannel": {
+            "orderers": [
+                "orderer.switch2logic.co.za"
+            ],
+            "peers": {
+                "peer0.hospital1.switch2logic.co.za": {
+                    "endorsingPeer": true,
+                    "chaincodeQuery": true,
+                    "eventSource": true
+                },
+                "peer1.hospital1.switch2logic.co.za": {
+                    "endorsingPeer": true,
+                    "chaincodeQuery": true,
+                    "eventSource": true
+                },
+                "peer2.hospital1.switch2logic.co.za": {
+                    "endorsingPeer": true,
+                    "chaincodeQuery": true,
+                    "eventSource": true
+                },
+                "peer3.hospital1.switch2logic.co.za": {
+                    "endorsingPeer": true,
+                    "chaincodeQuery": true,
+                    "eventSource": true
+                }
+            }
+        }
+    },
+    "client": {
+        "organization": "Hospital1",
+        "connection": {
+            "timeout": {
+                "peer": {
+                    "endorser": "300",
+                    "eventHub": "300",
+                    "eventReg": "300"
+                },
+                "orderer": "300"
+            }
+        }
+    }
+}
