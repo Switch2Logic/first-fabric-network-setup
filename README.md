@@ -1,7 +1,7 @@
 # First Hyperledger Fabric Network Setup
 I am a masters student learning Hyperledger Fabric. The purpose of this project was to learn how to set up a simple single organization network on Hyperledger Fabric from the ground up. This network includes the following 4 peers, 1 Orderer, 1 CA and a fabric-client. 
 
-# Challenge
+# Challenges
 1. Understanding what the crypto-config.yaml and configtx.yaml files actualy do. 
 2. Seting up docker-composer.yaml files. I did not understand what I was doing. I got confused with example code provided Hyperledger Fabric. This mainly due to the fact that I thought the docker-compose.yaml was appart of Hyperledger Fabric. 
 3. Getting the peers to comunicate was an issue even on the local machine.
